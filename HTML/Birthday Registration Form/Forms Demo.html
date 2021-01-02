@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+
+    <!-- Use form tags to take inputs from user
+     Label tags to associate text with the entry box 
+     where id is same as for -->
+
+    <form action="/pages">
+        <p>
+            <label for="username"> Enter a Username: </label>
+            <input id="username" type="text" placeholder="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a Password: </label>
+            <input id="password" type="password" placeholder="password" name="password">
+        </p>
+        <p>
+            <label for="color">Select a color: </label>
+            <input id="color" type="color">
+        </p>
+        <p>
+            <label for="number">Enter a number: </label>
+            <input id="number" type="number" placeholder="enter a number" name="num">
+        </p>
+        <!-- A button for the form -->
+        <button>Submit</button>
+    </form>
+
+
+    <hr>
+    <!-- Creating search bars that redirect to other sizes using their servers -->
+    <h2>Searches</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+
+    <hr>
+    <h2>More Inputs</h2>
+    <form action="/otherinputs">
+
+        <!-- Creating a checkbox input -->
+        <label for="agree">I agreee to the terms of service</label>
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+
+        <p>
+            <!-- Creating radio inputs -->
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+
+        <p>
+            <!-- Creating a drop down menu input -->
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="vegetarian" selected>Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+
+        <p>
+            <!-- Creating a range/slider input  -->
+            <label for="cheese">Amount of Cheese:</label>
+            <input type="range" name="cheese_level" id="cheese" min="1" max="100" step="5" value="75">
+        </p>
+
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <textarea name="requests" id="requests" cols="30" rows="5" placeholder="Type something here..."></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <hr>
+    <h2>Validation Demo</h2>
+    <form action="/validation">
+        <!-- Using validation or making entry required in form -->
+        <label for="first">Enter first name</label>
+        <input type="text" name="first" id="first" minlength="2" maxlength="25" required>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar's 20th Birthday</title>
+</head>
+
+<body>
+    <h1>Omar's 20th Birthday Bash Registration!</h1>
+    <hr>
+    <form action="/registration">
+        <!-- First & last name input -->
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" required>
+        </div>
+
+        <!-- Radio input to select a meal -->
+        <p>Select your choice of meal:</p>
+        <div>
+            <label for="fish">Fried Fish</label>
+            <input type="radio" names="meal" id="fish">
+            <br>
+            <label for="chicken">Tandoori Chicken</label>
+            <input type="radio" names="meal" id="chicken">
+            <br>
+            <label for="alfredo">Shrimp Alfredo</label>
+            <input type="radio" names="meal" id="alfredo">
+        </div>
+
+        <div>
+            <br>
+            <!-- Take email as input -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <!-- Selection for age group-->
+            <label for="age">Select Age Group:</label>
+            <select name="age" id="age" required>
+                <option value="teen">Under 18</option>
+                <option value="adult">19-35</option>
+                <option value="elders">Over 36</option>
+            </select>
+        </div>
+        <!-- Checkbox to ask user if they're bringing gifte -->
+        <div>
+            <label for="gifts">I am bringing gifts!</label>
+            <input type="checkbox" name="gifts" id="gifts">
+        </div>
+        <br>
+        <button>Register</button>
+    </form>
+</body>
+
+</html>
